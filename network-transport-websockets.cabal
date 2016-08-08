@@ -1,0 +1,39 @@
+name:                network-transport-websockets
+version:             0.0.1.0
+license:             BSD3
+license-file:        LICENSE
+author:              Utku Demir
+maintainer:          utdemir@gmail.com
+category:            Network
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  exposed-modules:   Network.Transport.WebSockets
+  other-modules:     Network.Transport.WebSockets.RoutingTable
+  build-depends:       base >=4.8 && <5.0
+                     , network-transport
+                     , websockets
+                     , hslogger
+                     , containers
+                     , bytestring
+                     , random
+                     , binary
+                     , deepseq
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+-- test-suite tests
+--   type:           exitcode-stdio-1.0
+--   main-is:        test/Test.hs
+--   build-depends: base
+--                , network-transport-websockets
+--                , network-transport-tests
+--                , hslogger
+--                , network-transport
+--                , wai-websockets
+--                , warp
+--                , wai
+--                , network
+--                , websockets
+--                , bytestring
